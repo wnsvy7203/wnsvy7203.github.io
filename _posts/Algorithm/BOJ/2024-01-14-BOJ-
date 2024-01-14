@@ -1,0 +1,40 @@
+---
+title: [BOJ] 1008. A/B [C++]
+date: 2024-01-14 23:48:00 +09:00
+categories: [Algorithm, BOJ]
+tags:
+  [
+    C++,
+  ]
+---
+www.acmicpc.net/problem/1008/
+
+# 문제
+![1008](./../../../assets/img/screenshot/1008.png)
+
+# 풀이
+- 소수점을 고정하여 출력할 줄만 알면 풀 수 있는 문제였다.
+  ```markdown
+    std::fixed
+      - 소수점 아래로 고정
+      - 이후의 출력들은 소수점 아래로 설정한 precision으로 넘겨준 값만큼만 출력한다.
+
+    std::cout.precision(n)
+      - 출력할 실수 전체 자릿 수를 n자리로 표현
+  ```
+
+# 정답 코드
+```c++
+#include <iostream>
+
+using namespace std;
+
+int main() {
+	  double a, b;
+
+    cin >> a >> b;
+
+    cout.precision(15);
+		cout << fixed << a / b << endl;
+}
+```
