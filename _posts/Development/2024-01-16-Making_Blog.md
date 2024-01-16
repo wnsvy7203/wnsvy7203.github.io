@@ -49,6 +49,7 @@ $ bundler -v  # Bundler version 2.5.4
 설치가 끝났다면, Jekyll 사이트를 생성해준다. 다만, 그 과정에 앞서 Jekyll 사이트를 관리할 Github Repository를 먼저 만들어줘야 한다.
 <br>
 
+### ***Github Repository 생성***
 ![Imgur](https://i.imgur.com/hGQAGxV.png)
 <br>
 
@@ -57,11 +58,13 @@ $ bundler -v  # Bundler version 2.5.4
 
 > 레포지토리 생성 시, README 파일은 빼자.<br> 이미 파일이 있는 디렉토리에서 jekyll 사이트를 생성하면, 오류 메시지를 출력할 수 있다.
 
+### ***Jekyll 사이트 생성***
+
 ```shell
 $ jekyll new ./
 $ jekyll new ./ --force
 ```
-만약 README 파일 때문에 위의 커맨드가 먹히지 않는다면, 설치 커맨드 뒤에 `--force`를 추가하면 강제로 설치된다.
+만약 README 파일 때문에 위의 커맨드가 먹히지 않는다면, 커맨드 뒤에 `--force`를 추가하면 강제로 설치된다.
 
 jekyll 사이트가 설치되었다면, 다음의 파일들이 생성된다.
 <br>
