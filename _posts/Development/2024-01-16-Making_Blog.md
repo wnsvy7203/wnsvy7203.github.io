@@ -16,7 +16,7 @@ tags:
 ## **1. Ruby, Jekyll 설치**
 Jekyll은 정적 사이트 생성기(Static Site Generator, SSG)로, 사용자가 Markdown으로 작성한 문서를 HTML로 변환하여 정적 웹사이트를 생성하는 역할을 한다.
 
-jekyll은 Ruby라는 언어를 사용해 만들어졌기 때문에, jekyll 사용하기 위해서는 Ruby도 함께 설치해야 한다.
+jekyll은 Ruby라는 언어를 사용해 만들어졌기 때문에, jekyll을 사용하기 위해서는 Ruby도 함께 설치해야 한다.
 
 ### ***루비 설치 방법***
 [Ruby 다운로드 페이지](https://rubyinstaller.org/downloads/)
