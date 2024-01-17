@@ -1,5 +1,5 @@
 ---
-title: "<strong>[Blog] Github 블로그 개설 1</strong>"
+title: "[Blog] Github 블로그 개설 1"
 date: 2024-01-16 22:44:00 +09:00
 categories: [Development, Github]
 tags:
