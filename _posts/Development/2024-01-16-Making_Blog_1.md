@@ -5,18 +5,18 @@ categories: [Development, Github]
 tags:
   [Development, Blog, Github, Ruby, Jekyll]
 ---
-## **Github 블로그 개설**
+## **1. 시작하며**
 ***
 
 빌드 에러와 어디서 잘못됐는지 모를 오류들을 해결하느라 몇 번을 갈아엎었는지 기억도 안 난다.. 그래도 성공했음에 뿌듯함을 느끼면서 Github 블로그를 개설하는 방법을 포스팅하고자 한다.
 
-여러 마음에 드는 테마가 있었고, 그중에서도 구글링을 통해 많은 정보를 얻을 수 있었던 chirpy 테마를 활용하기로 했다. 따라서 이 게시물도 chirpy를 기준으로 적고자 한다.
 <br>
 
-## **1. Ruby, Jekyll 설치**
+## **2. Ruby, Jekyll 설치**
+***
 Jekyll은 정적 사이트 생성기(Static Site Generator, SSG)로, 사용자가 Markdown으로 작성한 문서를 HTML로 변환하여 정적 웹사이트를 생성하는 역할을 한다.
 
-jekyll은 Ruby라는 언어를 사용해 만들어졌기 때문에, jekyll을 사용하기 위해서는 Ruby도 함께 설치해야 한다.
+Jekyll은 Ruby라는 언어를 사용해 만들어졌기 때문에, Jekyll을 사용하기 위해서는 Ruby도 함께 설치해야 한다.
 
 ### **(1) 루비 설치 방법**
 [Ruby 다운로드 페이지](https://rubyinstaller.org/downloads/)
@@ -29,7 +29,12 @@ jekyll은 Ruby라는 언어를 사용해 만들어졌기 때문에, jekyll을 �
 
 > ChatGPT한테 물어보니까 Jekyll은 Ruby로 개발된 정적 웹사이트 생성기이며, Ruby는 32bit와 64bit 아키텍처를 모두 지원한다. ***따라서 Jekyll 자체가 32bit 혹은 64bit로 구현되지 않는다고 한다.*** 그렇다면 그냥 **추천하는 버전**을 설치하는 게 낫겠다.
 
-## **2. Jekyll 설치**
+Ruby 설치 과정에서 주어진 체크박스는 모두 체크한 채로 진행했다.
+
+<br>
+
+## **3. Jekyll 설치**
+***
 cmd, git bash 중 아무 커맨드 창을 열어서 다음의 커맨드를 입력하면 설치된다.
 
 ```shell
@@ -39,13 +44,15 @@ $ gem install bundler
  
 함께 설치한 **bundler**는 Ruby 프로젝트의 의존성을 관리하는 도구라고 한다. Jekyll 설치 시 bundler를 사용하는 이유는 주로 프로젝트에 필요한 정확한 버전의 gem(라이브러리)를 관리하기 위한 것이라고 알아두는 정도에서 그쳐도 될 것 같다.
 
-**설치 버전 확인**
+***설치 버전 확인***
 ```shell
 $ jekyll -v   # jekyll 4.3.3
 $ bundler -v  # Bundler version 2.5.4
 ```
+<br>
 
-## **3. Jekyll 사이트 생성**
+## **4. Jekyll 사이트 생성**
+***
 설치가 끝났다면, Jekyll 사이트를 생성해준다. 다만, 그 과정에 앞서 Jekyll 사이트를 관리할 Github Repository를 먼저 만들어줘야 한다.
 
 ### **(1) Github Repository 생성**
@@ -57,7 +64,7 @@ $ bundler -v  # Bundler version 2.5.4
 
 > 레포지토리 생성 시, README 파일은 빼자.<br> 이미 파일이 있는 디렉토리에서 jekyll 사이트를 생성하면, 오류 메시지를 출력할 수 있다.
 
-### **(2)Jekyll 사이트 생성**
+### **(2) Jekyll 사이트 생성**
 
 ```shell
 $ jekyll new ./
@@ -94,5 +101,5 @@ $ jekyll serve
 ![Imgur](https://i.imgur.com/cST85Fd.png)
 <br>
 
-## **4. 마치며**
+## **5. 마치며**
 이제 기본적인 준비는 모두 끝났다. 다음 포스트에서는, 테마를 적용하여 필요한 설정을 마친 후, 폰트를 적용해 게시물을 작성하는 것까지 해 보려고 한다.
