@@ -18,7 +18,7 @@ Jekyll은 정적 사이트 생성기(Static Site Generator, SSG)로, 사용자�
 
 jekyll은 Ruby라는 언어를 사용해 만들어졌기 때문에, jekyll을 사용하기 위해서는 Ruby도 함께 설치해야 한다.
 
-### ***루비 설치 방법***
+### **(1) 루비 설치 방법**
 [Ruby 다운로드 페이지](https://rubyinstaller.org/downloads/)
 <br>
 
@@ -47,9 +47,8 @@ $ bundler -v  # Bundler version 2.5.4
 
 ## **3. Jekyll 사이트 생성**
 설치가 끝났다면, Jekyll 사이트를 생성해준다. 다만, 그 과정에 앞서 Jekyll 사이트를 관리할 Github Repository를 먼저 만들어줘야 한다.
-<br>
 
-### ***Github Repository 생성***
+### **(1) Github Repository 생성**
 ![Imgur](https://i.imgur.com/hGQAGxV.png)
 <br>
 
@@ -58,7 +57,7 @@ $ bundler -v  # Bundler version 2.5.4
 
 > 레포지토리 생성 시, README 파일은 빼자.<br> 이미 파일이 있는 디렉토리에서 jekyll 사이트를 생성하면, 오류 메시지를 출력할 수 있다.
 
-### ***Jekyll 사이트 생성***
+### **(2)Jekyll 사이트 생성**
 
 ```shell
 $ jekyll new ./
