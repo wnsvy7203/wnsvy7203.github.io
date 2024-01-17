@@ -2,8 +2,7 @@
 title: "[Blog] Github 블로그 개설 1"
 date: 2024-01-16 22:44:00 +09:00
 categories: [Development, Github]
-tags:
-  [Development, Blog, Github, Ruby, Jekyll]
+tags: [Development, Blog, Github, Ruby, Jekyll]
 ---
 ## **1. 시작하며**
 ***
