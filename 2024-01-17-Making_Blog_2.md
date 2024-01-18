@@ -10,7 +10,4 @@ tags: [Development, Blog, Github, Ruby, Jekyll, jekyll-theme-chirpy]
 
 여러 마음에 드는 테마가 있었지만, chirpy 테마를 선택해서 블로그를 꾸며보기로 했다.
 
-다른 테마들은 아래의 사이트에서 확인할 수 있다.
-[Jekyll Themes](http://jekyllthemes.org)
-
 <br>
