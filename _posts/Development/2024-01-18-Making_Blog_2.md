@@ -15,6 +15,8 @@ tags: [Development, Blog, Windows, Github, Ruby, Jekyll, jekyll-theme-chirpy]
 > <br>
 >[Github 블로그 개설 1](https://wnsvy7203.github.io/posts/Making_Blog_1)
 
+<br>
+
 ## **2. chirpy 테마 설치**
 ***
 지난 포스팅까지 잘 따라왔다면, 아직 테마가 적용되기 전의, 날것의 jekyll 블로그 하나가 만들어졌을 것이다.
@@ -70,6 +72,7 @@ $ bundle exec jekyll serve
 |toc|true|게시물의 오른쪽에 목차 표시|
 |paginate|10|목록에 최대 몇 개의 글을 표시할 것인지를 선택|
 
+<br>
 
 ## **3. 빌드 및 배포**
 ***
@@ -175,6 +178,7 @@ package-lock.json
 <br>
 
 ![Imgur](https://i.imgur.com/kFoJvnb.png)
+
 <br>
 
 ## **4. 마치며**
