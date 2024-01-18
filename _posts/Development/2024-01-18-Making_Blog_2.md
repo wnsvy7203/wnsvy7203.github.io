@@ -138,7 +138,7 @@ git push 하기 이전에, 앞서 빌드 및 배포 설정을 바꾸면서 Creat
 ![Imgur](https://i.imgur.com/uQ09p7C.png)
 <br>
 
-구글링해보니까 node.js 모듈을 설치하고 initialize 과정이 없으면 이 에러가 발생하는 것 같다. 혹시 node.js가 깔려 있지 않다면 설치[Node.js 설치](https://nodejs.org/en/download)해주고 커맨드 창에 다음과 같은 명령어를 입력해준다.
+구글링해보니까 node.js 모듈을 설치하고 initialize 과정이 없으면 이 에러가 발생하는 것 같다. 혹시 node.js가 깔려 있지 않다면 설치([Node.js 설치](https://nodejs.org/en/download))해주고 커맨드 창에 다음과 같은 명령어를 입력해준다.
 
 ```shell
 $ npm install -g win-node-env
