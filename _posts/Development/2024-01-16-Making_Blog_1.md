@@ -2,7 +2,7 @@
 title: "[Blog] Github 블로그 개설 1"
 date: 2024-01-16 22:44:00 +09:00
 categories: [Development, Github]
-tags: [Development, Blog, Github, Ruby, Jekyll]
+tags: [Development, Blog, Windows, Github, Ruby, Jekyll]
 ---
 ## **1. 시작하며**
 ***
@@ -100,4 +100,4 @@ $ jekyll serve
 <br>
 
 ## **5. 마치며**
-이제 기본적인 준비는 모두 끝났다. 다음 포스트에서는, 테마를 적용하여 필요한 설정을 마친 후, 폰트를 적용해 게시물을 작성하는 것까지 해 보려고 한다.
+이제 기본적인 준비는 모두 끝났다. 다음 포스팅은, 테마를 적용하여 다른 사람들도 접근할 수 있도록 빌드 및 배포까지 진행해 보려고 한다.
