@@ -101,3 +101,7 @@ $ jekyll serve
 
 ## **5. 마치며**
 이제 기본적인 준비는 모두 끝났다. 다음 포스팅은, 테마를 적용하여 다른 사람들도 접근할 수 있도록 빌드 및 배포까지 진행해 보려고 한다.
+
+> <strong>다음 포스트</strong>
+> <br>
+> [Github 블로그 개설 2](https://wnsvy7203.github.io/posts/Making_Blog_2/)

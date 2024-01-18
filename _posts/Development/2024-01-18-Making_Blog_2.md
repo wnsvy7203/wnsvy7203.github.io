@@ -11,8 +11,9 @@ tags: [Development, Blog, Windows, Github, Ruby, Jekyll, jekyll-theme-chirpy]
 여러 마음에 드는 테마가 있었지만, chirpy 테마가 깔끔하기도 하고, 무엇보다도 대중적인 느낌이라 구글링으로 많은 도움을 받을 수 있겠다 싶어서 chirpy 테마를 사용해 블로그를 꾸며보기로 했다.
 <br>
 
-> [Github 블로그 개설 1](https://wnsvy7203.github.io/posts/Making_Blog_1)
-<br>
+> <strong>이전 포스트</strong>
+> <br>
+>[Github 블로그 개설 1](https://wnsvy7203.github.io/posts/Making_Blog_1)
 
 ## **2. chirpy 테마 설치**
 ***
