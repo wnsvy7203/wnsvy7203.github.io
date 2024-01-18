@@ -174,7 +174,7 @@ package-lock.json
 ```
 앞서 설치된 min.js 파일들은 assets/js/dist안에 설치되어 github 원격 저장소에 저장되지 않는다. 따라서 assets/js/dist 부분을 주석처리하여 원격 저장소에 저장되도록 처리해준다.
 
-이제 우리는 제대로 빌드된 블로그를 확인할 수 있다.
+마침내.. 제대로 빌드된 블로그를 확인할 수 있다.
 <br>
 
 ![Imgur](https://i.imgur.com/kFoJvnb.png)
