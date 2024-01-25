@@ -1,64 +1,62 @@
-// 28ms
+// 4ms
 
 #include <iostream>
-#include <tuple>
+#include <string>
 #include <algorithm>
-#include <climits>
-#include <cmath>
 
 using namespace std;
 
-int N;
-long long liquid[5000];
-
-void input()
-{
-    cin >> N;
-    for (int i = 0; i < N; i++)
-        cin >> liquid[i];
-    
-    sort(liquid, liquid+N);
-}
-
-tuple<long long, long long, long long> ans;
-long long comp = 3'000'000'000;
-void two_pointer()
-{
-    for (int i = 0; i < N-2; i++)
-    {
-        int s = i+1;
-        int e = N-1;
-
-        while (s < e)
-        {
-            long long sum = liquid[i] + liquid[s] + liquid[e];
-            if (abs(comp) > abs(sum))
-            {
-                comp = sum;
-                ans = {liquid[i], liquid[s], liquid[e]};
-            }
-
-            if (sum < 0)
-                s++;
-            else if (sum > 0)
-                e--;
-            else
-                return;
-        }
-    }
-}
-
-void find_answer()
-{
-    cout << get<0>(ans) << ' ' << get<1>(ans) << ' ' << get<2>(ans);
-}
+string str1, str2;
+// string dp[1001][1001];
+int dp[1001][1001];
+string ans;
 
 int main()
 {
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 
-    input();
-    two_pointer();
-    find_answer();
+    cin >> str1 >> str2;
+    int N = str1.length();
+    int M = str2.length();
+    
+    // string으로 푼 부분
+    // for (int i = 1; i <= N; i++)
+    //     for (int j = 1; j <= M; j++)
+    //         if (str1[i-1] == str2[j-1])
+    //             dp[i][j] = dp[i-1][j-1] + str1[i-1];
+    //         else
+    //         {
+    //             if (dp[i-1][j].length() >= dp[i][j-1].length())
+    //                 dp[i][j] = dp[i-1][j];
+    //             else
+    //                 dp[i][j] = dp[i][j-1];
+    //         }
+
+    // cout << dp[N][M].length() << '\n' << dp[N][M];
+
+    for (int i = 1; i <= N; i++)
+        for (int j = 1; j <= M; j++)
+            if (str1[i-1] == str2[j-1])
+                dp[i][j] = dp[i-1][j-1] + 1;
+            else
+                dp[i][j] = max(dp[i-1][j], dp[i][j-1]);
+
+    cout << dp[N][M] << '\n';
+
+    while (dp[N][M])
+    {
+        if (dp[N][M] == dp[N-1][M])
+            N--;
+        else if (dp[N][M] == dp[N][M-1])
+            M--;
+        else
+        {
+            N--, M--;
+            ans += str2[M];
+        }
+    }
+
+    reverse(ans.begin(), ans.end());
+    cout << ans;
 }
