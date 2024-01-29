@@ -2,7 +2,7 @@
 title: "[Algorithm] Floyd Warshall(플로이드-워셜)"
 date: 2024-01-29 02:48:00 +09:00
 categories: [Algorithm, Problem Solving(PS)]
-tags: [Algorithm, C++, 그래프 이론, 최소 스패닝 트리]
+tags: [Algorithm, C++, 그래프 이론, 최단 경로, 플로이드-워셜]
 ---
 ## **1. 개요**
 모든 정점에서 다른 정점으로의 최단 경로를 한 번에 구하는 알고리즘
