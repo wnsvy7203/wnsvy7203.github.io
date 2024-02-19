@@ -67,7 +67,7 @@ Windows 버전을 다운로드하게 되면, `.jar` 파일이 하나 생성된�
 
 ![Imgur](https://i.imgur.com/Cmnt35B.png)
 
-RELEASE 디렉토리에 들어가서 `SpringToolSuite4.exe` 파일을 실행시키면 workspace를 지정하라는 안내문이 나온다. 이 때, 이클립스의 구동을 위해서 workspace는 jdk와 sts가 설치된 디렉토리로 지정한다.
+이제, RELEASE 디렉토리에 들어가서 `SpringToolSuite4.exe` 파일을 실행시키면 workspace를 지정하라는 안내문이 나온다. 이 때, 이클립스의 구동을 위해서 workspace는 jdk와 sts가 설치된 디렉토리로 지정한다.
 
 ![Imgur](https://i.imgur.com/uocevy9.png)
 
