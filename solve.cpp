@@ -1,94 +1,102 @@
 #include <iostream>
-#include <string>
 #include <vector>
-#include <tuple>
-#include <map>
+#include <algorithm>
+
+#define MAX 100001
 
 using namespace std;
 
-vector<int> fees = {180, 5000, 10, 600};
-vector<string> records = {"05:34 5961 IN", "06:00 0000 IN", "06:34 0000 OUT", "07:59 5961 OUT", "07:59 0148 IN", "18:59 0000 IN", "19:09 0148 OUT", "22:59 5961 IN", "23:00 5961 OUT"};
+int N, M;
+int A[MAX], par[MAX];
 
-vector<int> solution() {
-    vector<int> answer;
+int find(int x)
+{
+    if (par[x] == x)
+        return x;
+
+    return par[x] = find(par[x]);
+}
+
+void union_sets(int x, int y)
+{
+    x = find(x);
+    y = find(y);
+
+    if (x > y)
+        swap(x, y);
+    else if (x == y)
+        return;
     
-    map<string, tuple<bool, int, int>> input;
-    for (string record : records)
+    par[y] = x;
+    A[x] += A[y];
+    A[y] = 0;
+}
+
+void begin_war(int x, int y)
+{
+    x = find(x);
+    y = find(y);
+
+    if (A[x] > A[y])
+        swap(x, y);
+    else if (A[x] == A[y])
     {
-        string code = record.substr(11);
-        int time = stoi(record.substr(0, 2)) * 60 + stoi(record.substr(3, 2));
-        string car = record.substr(6, 4);
-        
-        if (code == "IN")
-        {
-            get<0>(input[car]) = true;
-            get<1>(input[car]) = time;
-        }
+        A[x] = 0; par[x] = 0;
+        A[y] = 0; par[y] = 0;
+        return;
+    }
+
+    A[y] -= A[x];
+    A[x] = 0;
+    par[x] = y;
+}
+
+void init()
+{
+    cin >> N >> M;
+    for (int i = 1; i <= N; i++)
+    {
+        cin >> A[i];
+        par[i] = i;
+    }
+    
+    while (M--)
+    {
+        int O, P, Q;
+        cin >> O >> P >> Q;
+
+        if (O == 1)
+            union_sets(P, Q);
         else
-        {
-            int parking = time - get<1>(input[car]);
-            get<0>(input[car]) = false;
-            get<1>(input[car]) = 0;
-            get<2>(input[car]) += parking;
-        }
+            begin_war(P, Q);
     }
-    
-    for (auto it : input)
-    {
-        if (get<0>(it.second) == true)
-        {
-            int parking = 1439 - get<1>(it.second);
-            get<0>(it.second) = false;
-            get<1>(it.second) = 0;
-            int time = get<2>(it.second);
-            get<2>(it.second) = time + parking;
-        }
-    }
-    
-    map<string, int> costs;
-    cout << "디버그\n";
-    for (auto it : input)
-    {
-        cout << "안 오나?\n";
-        int parking = get<2>(it.second);
-        cout << "이거는? " << parking << '\n'; 
-        int cost = 0;
-            
-        if (parking <= fees[0])
-            cost = fees[1];
-        else
-        {
-            parking -= fees[0];
-            cout << parking << " 주차시간\n";
-            cost += fees[1];
+}
 
-            if (!(parking % fees[2]))
-            {
-                parking /= fees[2];
-                cout << parking << " 단위 시간\n";
-            }
-            else
-            {
-                parking /= fees[2];
-                parking++;
-                cout << parking << " 단위 시간\n";                
-            }
-            
-            cout << parking * fees[3] << " 주차요금\n";
-            cost += (parking * fees[3]);
+void find_answer()
+{
+    int cnt = 0;
+    vector<int> ans;
+    for (int i = 1; i <= N; i++)
+    {
+        if (par[i] == i)
+        {
+            ans.push_back(A[i]);
+            cnt++;
         }
-
-        costs.insert({it.first, cost});
     }
-    
-    for (auto it : costs)
-        answer.push_back(it.second);
-    
-    return answer;
+
+    sort(ans.begin(), ans.end());
+
+    cout << cnt << '\n';
+    for (int num : ans)
+        cout << num << ' ';
 }
 
 int main()
 {
-    for (int ans : solution())
-        cout << ans << ' ';
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+
+    init();
+    find_answer();
 }
