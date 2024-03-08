@@ -1,58 +1,38 @@
-// 516ms
-
 #include <iostream>
+#include <algorithm>
+#include <queue>
 
-#define MAX 100001
+#define MAX 300000
 
 using namespace std;
 
-int T, n, ans;
-int arr[MAX];
-bool visited[MAX], done[MAX];
+int N, K;
+vector<pair<int, int>> MV(MAX);
+vector<int> C(MAX);
 
-void dfs(int idx)
+void init()
 {
-    visited[idx] = 1;
+    cin >> N >> K;
 
-    int next = arr[idx];
-    if (!visited[next])
-        dfs(next);
-    else if (!done[next])
-    {
-        ans++;
+    for (int i = 0; i < N; i++)
+        cin >> MV[i].first >> MV[i].second;
 
-        for (int i = next; i != idx; i = arr[i])
-            ans++;
-    }
-    
-    done[idx] = 1;
+    for (int i = 0; i < K; i++)
+        cin >> C[i];
+
+    sort(MV.begin(), MV.begin()+N);
+    sort(C.begin(), C.begin()+K);
 }
 
 void find_answer()
 {
-    ans = 0;
-    for (int i = 1; i <= n; i++)
-        if (!done[i])
-            dfs(i);
-
-    cout << n - ans << '\n';
-}
-
-void init()
-{
-    cin >> T;
-    while (T--)
+    int ans = 0;
+    while (!C.empty())
     {
-        fill_n(&arr[0], MAX, 0);
-        fill_n(&visited[0], MAX, false);
-        fill_n(&done[0], MAX, false);
 
-        cin >> n;
-        for (int i = 1; i <= n; i++)
-            cin >> arr[i];
-
-        find_answer();
     }
+
+    cout << ans;
 }
 
 int main()
@@ -61,4 +41,5 @@ int main()
     cin.tie(NULL);
 
     init();
+    find_answer();
 }
